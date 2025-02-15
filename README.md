@@ -17,6 +17,11 @@
 * Customizable callbacks for before and after loading resources
 
   
+## Video Showcase
+
+[![React Preload Assets Demo](https://img.youtube.com/vi/ntBL8ysbZwo/maxresdefault.jpg)](https://www.youtube.com/watch?v=ntBL8ysbZwo)
+
+Watch the demo video to see react-preload-assets in action! 
 
 ## Installation
 
