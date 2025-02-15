@@ -1,0 +1,61 @@
+{
+  "name": "react-preload-assets",
+  "private": false,
+  "version": "1.2.3",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "workspaces": [
+    ".",
+    "examples/*"
+  ],
+  "scripts": {
+    "extract": "tsup src/scripts/extractPreloadAssets.ts",
+    "dev": "vite",
+    "build": "tsup ",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "bundle": "tsup src/index.ts"
+  },
+  "bin": {
+    "extract-preload-assets": "./dist/scripts/extractPreloadAssets.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "tsup": "^8.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "author": "SJunWah",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SJunWah/react-preload-assets.git"
+  },
+  "license": "MIT"
+}
