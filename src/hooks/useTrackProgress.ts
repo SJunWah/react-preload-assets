@@ -10,17 +10,11 @@ interface TrackProgressParamsInterface {
   };
 }
 
-interface TrackProgressRespInterface {
+interface ProgressState {
   progress: number;
   currentResource?: number;
   totalResources?: number;
   currentResourceName?: string;
-}
-interface ProgressState {
-  progress: number;
-  currentResource: number;
-  totalResources: number;
-  currentResourceName: string;
 }
 
 interface JsonDataInterface {
@@ -38,7 +32,7 @@ export function useTrackProgress({
     isLoadVideo: true,
     isLoadImage: true,
   },
-}: TrackProgressParamsInterface): TrackProgressRespInterface {
+}: TrackProgressParamsInterface): ProgressState {
 
   const [progressState, setProgressState] = useState<ProgressState>({
     progress: 0,
